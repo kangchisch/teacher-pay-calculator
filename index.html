@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日代課老師薪資查詢</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">薪資試算工具</p>
+      <h1>日代課老師薪資查詢</h1>
+      <p class="intro">依薪級、月份與教師證條件，快速估算當日代課費。</p>
+    </header>
+
+    <section class="card" aria-labelledby="settings-title">
+      <h2 id="settings-title">查詢條件</h2>
+      <form id="calculator-form">
+        <div class="form-grid">
+          <label>版本
+            <select id="version" name="version"></select>
+          </label>
+          <label>月份
+            <select id="month" name="month">
+              <option value="1">1 月（31 天）</option><option class="february-option" value="2-28">2 月（28 天）</option>
+              <option class="february-option" value="2-29">2 月（29 天）</option><option value="3">3 月（31 天）</option>
+              <option value="4">4 月（30 天）</option><option value="5">5 月（31 天）</option>
+              <option value="6">6 月（30 天）</option><option value="7">7 月（31 天）</option>
+              <option value="8">8 月（31 天）</option><option value="9">9 月（30 天）</option>
+              <option value="10">10 月（31 天）</option><option value="11">11 月（30 天）</option><option value="12">12 月（31 天）</option>
+            </select>
+            <span class="hint">二月請依該年度是否為閏年，選擇 28 天或 29 天。</span>
+          </label>
+          <label>有無國小教師證
+            <select id="certificate" name="certificate"><option value="yes">有</option><option value="no">無</option></select>
+          </label>
+          <label>學歷
+            <select id="education" name="education"><option value="bachelor">大學</option><option value="credit40">40 學分班</option><option value="master">碩士</option><option value="doctor">博士</option></select>
+          </label>
+          <label>薪級
+            <select id="grade" name="grade"></select>
+            <span class="hint" id="grade-hint">有教師證時可自行選擇薪級。</span>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <section class="result" aria-live="polite">
+      <p class="result-label">當日代課費</p>
+      <output id="daily-pay" class="pay">—</output>
+      <p class="result-note" id="version-note"></p>
+    </section>
+
+    <section class="card calculation" aria-labelledby="calculation-title">
+      <h2 id="calculation-title">詳細計算過程</h2>
+      <p class="calculation-summary" id="calculation-text">載入薪資表中…</p>
+      <div class="table-scroll">
+        <table class="calculation-table">
+          <thead><tr><th>本俸</th><th>學術研究費</th><th>導師費</th><th>合計</th><th>天數</th><th>金額</th></tr></thead>
+          <tbody id="calculation-table-body"><tr><td colspan="6">載入薪資表中…</td></tr></tbody>
+        </table>
+      </div>
+      <p class="disclaimer">本工具僅供試算。實際給付仍應以各校與主管機關規定為準。</p>
+    </section>
+
+    <section class="card notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">規定與依據</h2>
+      <div id="notes-list"></div>
+    </section>
+  </main>
+  <script src="salary-data.js"></script>
+  <script src="site-notes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
