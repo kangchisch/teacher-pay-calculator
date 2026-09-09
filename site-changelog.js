@@ -1,6 +1,11 @@
 // 網站更新紀錄：新增資料時，請將最新的一筆放在最上方。
 window.siteChangelog = [
   {
+    version: '網站版本 2.2',
+    date: '115年9月10日',
+    content: '新增分享預覽標題與摘要，避免 LINE 分享時顯示表單欄位文字。'
+  },
+  {
     version: '網站版本 2.1',
     date: '115年9月10日',
     content: '網站下方新增 Google Analytics 匿名化流量統計說明。'
