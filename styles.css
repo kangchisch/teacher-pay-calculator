@@ -53,5 +53,6 @@ select:disabled { cursor:not-allowed; background:#edf0f0; color:#738083; }
 .note-sources a { color:var(--accent); font-weight:700; text-decoration-thickness:1px; text-underline-offset:2px; }
 .changelog-entry h3 { display:flex; justify-content:space-between; gap:12px; }
 .changelog-entry h3 span { color:var(--muted); font-size:.83rem; font-weight:400; white-space:nowrap; }
+.analytics-notice { margin:12px 4px 0; color:var(--muted); font-size:.78rem; line-height:1.6; text-align:center; }
 .note p,.empty-note { margin:0; color:#4f5e6d; line-height:1.8; }
 @media (max-width:560px) { .page { width:min(100% - 24px,760px); padding:36px 0; } .card,.result { padding:20px; border-radius:14px; } .form-grid { grid-template-columns:1fr; gap:16px; } .title-row { display:block; } .last-updated { margin-top:6px; } .scope-note { display:block; } .scope-note > strong { display:block; margin-bottom:3px; } }

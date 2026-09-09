@@ -1,6 +1,11 @@
 // 網站更新紀錄：新增資料時，請將最新的一筆放在最上方。
 window.siteChangelog = [
   {
+    version: '網站版本 2.1',
+    date: '115年9月10日',
+    content: '網站下方新增 Google Analytics 匿名化流量統計說明。'
+  },
+  {
     version: '網站版本 2.0',
     date: '115年9月10日',
     content: '新增 Google Analytics 4 匿名化流量統計，以供網站維護與使用情形分析。'
