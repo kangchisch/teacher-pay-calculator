@@ -2,8 +2,9 @@ window.salaryData = {
   versions: [
     {
       id: '115.7',
-      label: '115.7月',
+      label: '115.7月後(尚未收到公文)',
       effectiveDate: '115年7月',
+      isPreview: true,
       sourceFile: '115.7教師薪級表.xlsx',
       grades: [
         { grade: 190, basePay: 25050, researchAllowance: 25080, homeroomAllowance: 4000 },
@@ -26,13 +27,19 @@ window.salaryData = {
         { grade: 475, basePay: 44970, researchAllowance: 37780, homeroomAllowance: 4000 },
         { grade: 500, basePay: 46500, researchAllowance: 37780, homeroomAllowance: 4000 },
         { grade: 525, basePay: 48030, researchAllowance: 37780, homeroomAllowance: 4000 },
-        { grade: 550, basePay: 49560, researchAllowance: 37780, homeroomAllowance: 4000 }
+        { grade: 550, basePay: 49560, researchAllowance: 37780, homeroomAllowance: 4000 },
+        { grade: 575, basePay: 51100, researchAllowance: 37780, homeroomAllowance: 4000 },
+        { grade: 600, basePay: 52630, researchAllowance: 37780, homeroomAllowance: 4000 },
+        { grade: 625, basePay: 54160, researchAllowance: 37780, homeroomAllowance: 4000 },
+        { grade: 650, basePay: 55690, researchAllowance: 37780, homeroomAllowance: 4000 },
+        { grade: 680, basePay: 57220, researchAllowance: 37780, homeroomAllowance: 4000 }
       ]
     },
     {
       id: '115.6',
-      label: '115.6月',
+      label: '115.6月(現行)',
       effectiveDate: '115年6月',
+      status: 'current',
       sourceFile: '115.6教師薪級表.xlsx',
       grades: [
         { grade: 190, basePay: 25050, researchAllowance: 23080, homeroomAllowance: 4000 },
@@ -55,7 +62,12 @@ window.salaryData = {
         { grade: 475, basePay: 44970, researchAllowance: 35780, homeroomAllowance: 4000 },
         { grade: 500, basePay: 46500, researchAllowance: 35780, homeroomAllowance: 4000 },
         { grade: 525, basePay: 48030, researchAllowance: 35780, homeroomAllowance: 4000 },
-        { grade: 550, basePay: 49560, researchAllowance: 35780, homeroomAllowance: 4000 }
+        { grade: 550, basePay: 49560, researchAllowance: 35780, homeroomAllowance: 4000 },
+        { grade: 575, basePay: 51100, researchAllowance: 35780, homeroomAllowance: 4000 },
+        { grade: 600, basePay: 52630, researchAllowance: 35780, homeroomAllowance: 4000 },
+        { grade: 625, basePay: 54160, researchAllowance: 35780, homeroomAllowance: 4000 },
+        { grade: 650, basePay: 55690, researchAllowance: 35780, homeroomAllowance: 4000 },
+        { grade: 680, basePay: 57220, researchAllowance: 35780, homeroomAllowance: 4000 }
       ]
     }
   ]

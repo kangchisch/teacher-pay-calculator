@@ -10,9 +10,17 @@
   <main class="page">
     <header>
       <p class="eyebrow">薪資試算工具</p>
-      <h1>日代課老師薪資查詢</h1>
+      <div class="title-row">
+        <h1>日代課老師薪資查詢 <span class="site-version" id="site-version"></span></h1>
+        <p class="last-updated" id="last-updated"></p>
+      </div>
       <p class="intro">依薪級、月份與教師證條件，快速估算當日代課費。</p>
     </header>
+
+    <aside class="scope-note" aria-label="適用範圍">
+      <strong>適用範圍</strong>
+      <span>本工具僅用於嘉義市國民小學日代課導師之日薪<strong>試算</strong>，實際給付仍應<strong>以各校與主管機關規定為準</strong>；<br>按節代課請依每節 405 元自行計算。</span>
+    </aside>
 
     <section class="card" aria-labelledby="settings-title">
       <h2 id="settings-title">查詢條件</h2>
@@ -50,14 +58,15 @@
       <p class="result-label">當日代課費</p>
       <output id="daily-pay" class="pay">—</output>
       <p class="result-note" id="version-note"></p>
+      <p class="version-warning" id="version-warning" hidden></p>
     </section>
 
     <section class="card calculation" aria-labelledby="calculation-title">
-      <h2 id="calculation-title">詳細計算過程</h2>
+      <h2 id="calculation-title">詳細計算過程 <span class="calculation-grade" id="calculation-grade"></span></h2>
       <p class="calculation-summary" id="calculation-text">載入薪資表中…</p>
       <div class="table-scroll">
         <table class="calculation-table">
-          <thead><tr><th>本俸</th><th>學術研究費</th><th>導師費</th><th>合計</th><th>天數</th><th>金額</th></tr></thead>
+          <thead><tr><th>薪額</th><th>學術研究費<br><span class="table-subhead" id="research-source-grade">（採計薪級）</span></th><th>導師費</th><th>合計</th><th>天數</th><th>金額</th></tr></thead>
           <tbody id="calculation-table-body"><tr><td colspan="6">載入薪資表中…</td></tr></tbody>
         </table>
       </div>
@@ -68,9 +77,15 @@
       <h2 id="notes-title">規定與依據</h2>
       <div id="notes-list"></div>
     </section>
+
+    <details class="changelog-details">
+      <summary>網站更新紀錄</summary>
+      <div id="changelog-list"></div>
+    </details>
   </main>
   <script src="salary-data.js"></script>
   <script src="site-notes.js"></script>
+  <script src="site-changelog.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
