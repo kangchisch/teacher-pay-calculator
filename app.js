@@ -71,9 +71,11 @@ function calculate() {
   const days = monthDays[$('month').value];
   const research = researchAllowanceFor(version, row, hasCertificate, education);
   const researchPay = research.amount;
-  const total = row.basePay + researchPay + row.homeroomAllowance;
-  const rawDailyPay = total / days;
-  const roundedPay = Math.round(rawDailyPay);
+  const monthlySalary = row.basePay + researchPay;
+  const total = monthlySalary + row.homeroomAllowance;
+  const salaryDailyPay = Math.round(monthlySalary / days);
+  const homeroomDailyPay = Math.round(row.homeroomAllowance / days);
+  const roundedPay = salaryDailyPay + homeroomDailyPay;
   let researchDisplay;
   if (research.capped) {
     researchDisplay = `${number(researchPay)} 元`;
@@ -95,7 +97,7 @@ function calculate() {
     ? `學歷為大學，學術研究費依規定最高採計 450 級（${number(researchPay)} 元）。`
     : '';
   $('calculation-grade').textContent = `（薪級 ${grade}）`;
-  $('calculation-text').innerHTML = `薪額、學術研究費與導師費合計 ${number(total)} 元，除以 ${days} 天；四捨五入後，當日代課費為 ${number(roundedPay)} 元。${researchNote ? `<br><span class="research-note">${researchNote}</span>` : ''}`;
+  $('calculation-text').innerHTML = `月薪（薪額＋學術研究費）${number(monthlySalary)} 元 ÷ ${days} 天＝${number(salaryDailyPay)} 元（四捨五入）；導師費 ${number(row.homeroomAllowance)} 元 ÷ ${days} 天＝${number(homeroomDailyPay)} 元（四捨五入）；當日代課費合計為 ${number(salaryDailyPay)} ＋ ${number(homeroomDailyPay)} ＝${number(roundedPay)} 元。${researchNote ? `<br><span class="research-note">${researchNote}</span>` : ''}`;
 }
 
 function renderNotes() {
